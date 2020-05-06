@@ -112,5 +112,10 @@ Page({
   },
   bind_input(e) {
     app.bind_input(e, this);
+  },
+  // 分享
+  onShareAppMessage() {
+    wx.showShareMenu();
+    return { path: app.share_path() };
   }
 });
